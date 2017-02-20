@@ -2,10 +2,12 @@ const autoprefixer = require ('autoprefixer');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const commonjs = [
+  'babel-polyfill',
   'react',
   'react-dom',
   'redux',
   'react-redux',
+  'react-router',
 ];
 function getLoaders(isDev, isServer) {
   let cssPre = 'style!';

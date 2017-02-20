@@ -5,7 +5,8 @@
   "version": "0.0.1",
   "author": "shty1990@163.com",
   "repository": {
-    "type": "git"
+    "type": "git",
+    "url": "https://github.com/shtyboy/react-server-render.git"
   },
   "license": "MIT",
   "scripts": {
