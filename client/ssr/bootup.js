@@ -4,13 +4,15 @@ import {RouterContext } from 'react-router';
 import {renderToString } from 'react-dom/server';
 import createStore from '../store';
 import buildHash from '../../dist/client/hash.json';
-const createPage = (content = '', state = {}, options = {
+const defaultOpt = {
   lang: 'zh',
-  page: 'client',
   title: 'app',
   meta: '',
-  link: ''
-}) => {
+  link: '',
+  description:''
+};
+const createPage = (content = '', state = {}, opt) => {
+  let options = Object.assign({}, defaultOpt, opt);
   // 返回初始网页信息
   return `<!DOCTYPE html>
   <html lang=${options.lang}>

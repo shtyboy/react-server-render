@@ -12,7 +12,9 @@ class Index extends Component {
     };
   }
   componentWillMount() {
-    this.props.dispatch(appActions.appInit('The page is '));
+    if (!this.props.app || !this.props.app.title) {
+      this.props.dispatch(appActions.appInit('The page is '));
+    }
   }
   render() {
     return (

@@ -12,8 +12,7 @@ const router = Router();
 // 定义测试环境下的data服务器中转
 
 // ***  VVV  在下面添加新的router  VVV ****
-// import apiJump from "./apiJump"
-// import appIndex from "./appIndex"
+import app from "./app";
 
 router.get('*', function(req, res, next){
   let Ua = req.headers['user-agent'];
@@ -28,8 +27,8 @@ router.get('*', function(req, res, next){
 router.get('/favicon.ico', function(req, res, next){
 	res.end();
 });
-// router.use(apiJump)
-// router.use(appIndex)
+
+router.use(app);
 
 // *****^^^^  router end  ^^^^^*****
 export default router;
