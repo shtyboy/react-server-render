@@ -17,3 +17,12 @@
 - [Babel+](http://babeljs.io/docs/plugins/)
 - [ESLint](https://github.com/eslint/eslint)
 - [Code Splitting](https://webpack.github.io/docs/code-splitting.html)
+
+## Getting Started
+
+- Require Node.js v6 or later.
+- `npm install` to install dependencies and devDependencies.
+- `npm run dev` to start up the development environment without server render.
+- `npm run build:dev && npm start` to start up the development environment with server render.
+- `npm run build` to compile and bundle the client and server files.
+- `npm start` to deploy the production server.
