@@ -1,7 +1,7 @@
-import {applyMiddleware, createStore} from 'redux'
-import rootReducer from '../reducers'
-import thunkMiddleware from 'redux-thunk'
-import createLogger from 'redux-logger'
+import {applyMiddleware, createStore} from 'redux';
+import rootReducer from '../reducers';
+import thunkMiddleware from 'redux-thunk';
+import createLogger from 'redux-logger';
 
 const createStoreWithMiddleware = applyMiddleware(
   createLogger({
@@ -11,14 +11,14 @@ const createStoreWithMiddleware = applyMiddleware(
     // colors: ColorsObject,
   }),
   thunkMiddleware
-)(createStore)
+)(createStore);
 
 export default (initialState) => {
-  const store = createStoreWithMiddleware(rootReducer, initialState)
+  const store = createStoreWithMiddleware(rootReducer, initialState);
   if(module.hot){
     module.hot && module.hot.accept('../reducers', () => {
-      store.replaceReducer(require('../reducers'))
-    })
+      store.replaceReducer(require('../reducers'));
+    });
   }
-  return store
-}
+  return store;
+};
