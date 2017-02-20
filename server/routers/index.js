@@ -7,8 +7,8 @@
  * that's all
  */
 
-import {Router } from "express"
-const router = Router()
+import {Router } from "express";
+const router = Router();
 // 定义测试环境下的data服务器中转
 
 // ***  VVV  在下面添加新的router  VVV ****
@@ -16,20 +16,20 @@ const router = Router()
 // import appIndex from "./appIndex"
 
 router.get('*', function(req, res, next){
-  let Ua = req.headers['user-agent']
+  let Ua = req.headers['user-agent'];
   req.userUA = {
     isPhont: !!Ua.match(/(iPhone|iPod|iPad|android|BlackBerry)/i),
     isAndroid: !!Ua.match(/(android)/i),
     isMac: !!Ua.match(/()/i)
-  }
-	next()
-})
+  };
+	next();
+});
 
 router.get('/favicon.ico', function(req, res, next){
-	res.end()
-})
+	res.end();
+});
 // router.use(apiJump)
 // router.use(appIndex)
 
 // *****^^^^  router end  ^^^^^*****
-export default router
+export default router;

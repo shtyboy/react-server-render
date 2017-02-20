@@ -24,8 +24,8 @@
     "pm2": "pm2",
     "test": "mocha --compilers js:babel-register --require ./test/test_helper.js --recursive",
     "test:watch": "npm run test -- --watch",
-    "lint": "eslint --ext .js* ./client",
-    "lint-fix": "eslint --fix ./client/**/*.js*",
+    "lint": "eslint --ext .jsx,.js ./api ./client ./config ./server ./test ./unit",
+    "lint-fix": "eslint --fix  --ext .jsx,.js ./api ./client ./config ./server ./test ./unit",
     "gulp": "gulp imagemin"
   },
   "engines": {
